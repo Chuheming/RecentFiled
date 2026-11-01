@@ -26,8 +26,6 @@ Windows 桌面环境；需要 .NET Framework 4.x、Windows Forms 和系统 C# �
 
 构建产物是 `build\RecentWidget.exe`。在资源管理器中正常双击启动。日常使用不要求管理员权限。关闭按钮、Esc 或托盘菜单均可退出。
 
-脚本输出、exe、调试日志和测试截图属于构建产物，不应提交源码仓库。提供二进制下载时可将 exe 与 LICENSE 一起打包到 GitHub Releases。
-
 ## 操作
 
 - 拖动标题或空白区域移动卡片；拖动四边或四角调整宽高。
@@ -46,15 +44,12 @@ Windows 桌面环境；需要 .NET Framework 4.x、Windows Forms 和系统 C# �
 
 公开预览和自动测试使用虚构文件，不读取实际的最近文件列表或已保存的个人窗口设置。详细日志默认关闭；只有手动添加 `--diagnostics` 才启用。日志、正常模式截图或公开 Issue 仍可能暴露文件名和路径，分享前请脱敏。详见 [PRIVACY.md](PRIVACY.md)。
 
-配置保存在当前用户注册表 `Software\RecentWidget`。可选开机启动使用当前用户的 Run 项；不需要联网或注册账号。
 
 ## 安全生成演示图
 
 ```powershell
 .\build\RecentWidget.exe --shot docs\preview.png --demo --no-hover
 ```
-
-`--demo` 使用程序生成的虚构文件名和通用图标；它不会读取真实 Recent 列表。未加 `--demo` 的截图命令会使用真实列表，不要将这类图片直接公开。
 
 ## 完整性标签排障
 
